@@ -29,22 +29,22 @@ Click on the images of videos to watch them. Watch video 5 or 6 if you want to s
 
 <div align="center">
 	<a href="https://www.instagram.com/reel/DbS7qK0ilDo/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer"> 
-		<img src="resources/images/vid1.png" width="100" />
+		<img src="resources/images/vid1.png" width="120" />
 	</a>
 	<a href="https://www.instagram.com/reel/DbS74EgiR94/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer"> 
-		<img src="resources/images/vid2.png" width="100" />
+		<img src="resources/images/vid2.png" width="120" />
 	</a>
 	<a href="https://www.instagram.com/reel/DbS8F_3iFV1/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer"> 
-		<img src="resources/images/vid3.png" width="100" />
+		<img src="resources/images/vid3.png" width="120" />
 	</a>
 	<a href="https://www.instagram.com/reel/DbS8Rr6iW9l/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer"> 
-		<img src="resources/images/vid4.png" width="100" />
+		<img src="resources/images/vid4.png" width="120" />
 	</a>
 	<a href="https://www.instagram.com/reel/Db1qBOZSPOG/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer"> 
-		<img src="resources/images/vid5.png" width="100" />
+		<img src="resources/images/vid5.png" width="120" />
 	</a>
 	<a href="https://www.instagram.com/reel/Db5uuldi-zH/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer"> 
-		<img src="resources/images/vid6.png" width="100" />
+		<img src="resources/images/vid6.png" width="120" />
 	</a>
 </div>
 
