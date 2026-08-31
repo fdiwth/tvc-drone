@@ -29,7 +29,7 @@ There are mainly four different ways to make a TVC system: movable fins, gimbale
 However, the most modern rockets like SpaceX's falcon 9 and Starship, Rocket Lab's Electron, NASA's SLS,  KARI's Nuri(KSLV-II), JAXA's H3, CASC's Long March, ESA's Ariane and so on use gimbaled thrust to achieve controllability during flight. 
 
 Overall, the controllable values of the drone are the pwm signals for servo-x, servo-y, motor1, and motor2. With these, the drone is able to control its orientation and position around all x, y and z axis. 
-#### **LQR**
+### **LQR**
 
 A control scheme used in controlling the orientation and altitude of the drone is the **LQR (Linear Quadratic Regulator)**. This uses state vectors reflecting the current state of the system and matrices that are pre-computed using the properties of the system to drive the actuators in the direction that minimizes error. Because the gain matrix is pre-computed to be optimal, it bypasses the tedious process of manual tuning and only requires bench tests to balance the gains for different types of error and actuation penalty.
 
@@ -130,7 +130,7 @@ $$
 $$
 
 Because $K$ is solved once for the full 12-state augmented system, the resulting gains for the servo, differential-thrust, and thrust-vectoring channels are already balanced against one another. This eliminates the need for manual PID-style tuning and leaving only bench testing to fine-tune the relative weighting between error suppression and actuation cost. 
-#### **PID**
+### **PID**
 
 Most drone use the PID(Proportional Integral Derivative) controlling scheme to maintain stability during flight. Where the control output regarding the error is actuated in a tuned factor to each of proportional, integral and derivative gains. The proportional term steers the system towards reducing the error, the integral term accounts for inaccuracies in the system, and finally the derivative term acts as a damping to the otherwise oscillating system. Here is a great video on it: https://youtu.be/4Y7zG48uHRo?si=Jpp3Fp_0xEZwwcJJ.
 
@@ -157,12 +157,12 @@ The XY (horizontal) position was controlled using a **cascaded structure**. In t
 The position control is essential if one wants to prevent drift of the drone. Because the drone produces thrust below its center of gravity, it is dynamically similar to an inverted pendulum. It is inherently unstable and wants to tip over. Furthermore, tilting the gimbal in one direction not only causes a rotational torque but also induces translational motion. If there are slight misalignments in the CG or servos, the system will slowly drift over time. 
 
 As mentioned, the XY controller is split into an inner PID controller for velocity and an outer P controller for position. This structure allows the inner controller to quickly absorb any systematic mechanical offsets with its Integral (I) gain, while allowing the Proportional (P) gain of the outer position loop to be adjusted independently.
-#### **Anti-Windup Mechanisms**
+### **Anti-Windup Mechanisms**
 
 Because the control architecture is cascaded (Position $\rightarrow$ Velocity $\rightarrow$ Attitude), a crucial issue arises: integral windup. If the drone is pushed hard and the servos reach their physical maximum angle (saturation), the position and velocity errors will continue to grow because the drone cannot physically tilt any further to correct it. Without safeguards, the Integral term in the velocity loop would accumulate a massive, unrealistic error value. Once the drone is released, this huge integral value would cause the drone to violently snap back in the opposite direction.
 
 To solve this, the firmware implements an intelligent **Anti-Windup mechanism** in `freertos.c`. The system continuously monitors the downstream outputs (servo angles and motor thrusts). If the LQR attitude controller reaches its maximum allowed limits, a signal is passed back up the chain to the velocity PID controllers to *freeze* their integral accumulators. The integrals are only allowed to grow when the system has the physical authority to act upon them.
-#### **LQR Servo Mapping**
+### **LQR Servo Mapping**
 
 The LQR output vector ($u$) produces normalized control efforts. These values cannot be written directly to the hardware. Instead, they are translated into specific PWM signals for the two gimbal servos and two brushless motors through a mixing matrix.
 - Base Offset (`LQR_SSO = 50`): The neutral, upright position for the servos is defined as an percentage of 50% of actuation range. The LQR pitch and roll efforts are scaled and dynamically added/subtracted from this base offset.
@@ -209,19 +209,19 @@ $$
 by which altitude can be calculated.
 
 The ToF sensor has a limited range of up to 2m above a surface but provides much more accurate altitude readings. It uses the time it takes for light to travel to the ground surface and back to calculate the altitude. Since the ToF sensor is attatched physically to the drone, it tilts with the drone creating larger altitude readings than reality. This can be compensated for by scaling the reading by cosine of x and y orientations. 
-#### **Altitude Fusion**
+### **Altitude Fusion**
 
 Linear acceleration about the absolute Z-axis, altitude derived from the barometer, and the altitude readings from the compensated ToF sensor are fused using a Kalman filter. 
 
 - **Under 2 meters (ToF in range)**: The ToF sensor acts as the absolute authority due to its millimeter-level precision. During this phase, the Kalman filter trusts the ToF heavily and simultaneously uses the ToF readings to continuously recalibrate the Barometer's ground offset.
 - **Over 2 meters (ToF out of range)**: Once the drone exceeds the 2m threshold, the ToF reading becomes unreliable. The Kalman filter hands off primary altitude estimation to the barometer. Because the barometer was recalibrated just before leaving the 2m zone, the transition is seamless without sudden jumps in estimated altitude.
-#### **Velocity Fusion**
+### **Velocity Fusion**
 
 X and y velocities are sensed with an optical flow sensor (PMW3901) and integrated into position values. The optical flow sensor tracks patterns on ground surfaces to output angular velocity. 
 
 Since the optical flow sensor is physically mounted to the drone body, it senses a false change in surface patterns simply when the drone tilts. Thus, the angular velocity derived from the gyroscope orientation readings must be subtracted from the optical flow readings. Another effect is parallax: closer objects seem to move faster than objects further away. The raw readings are scaled based on the current estimated altitude to obtain the true velocity. This is then fused with accelerometer values using Kalman filters for each axis.
 
-#### **Low-pass Filter**
+### **Low-pass Filter**
 
 A discrete low pass filter of form:
 
@@ -229,7 +229,7 @@ $$y_{n} = \alpha \cdot y_{n-1} + (1 - \alpha) \cdot x_{n}$$
 
 was used in appropriate places to filter out noise.
 
-#### **Sensor Calibration**
+### **Sensor Calibration**
 
 Sensors need to be calibrated before use, to account for any misalignments or offsets. Magnetometer was calibrated for both soft iron and hard iron errors by using the MotionCal application to derive a 3 by 3 calibration matrix. And accelerometers are pre-calibrated to account for the PCB mounting offset and the sensor's inherent misalignments. Gyroscopes are calibrated at the beginning of every starting sequence when the drone gets power. 
 
@@ -240,7 +240,7 @@ The drone communicates with the receiver using LoRa RF modules. Specifically, tw
 ![[communication-diagram.png]]
 
 
-####  **LoRa Configuration**
+###  **LoRa Configuration**
 
 To comply with regional frequency regulations (e.g., Korea allows 920.9 ~ 923.3 MHz) and optimize for range, the Ebyte modules are configured using the following parameters:
 
@@ -260,7 +260,7 @@ Important registers to configure are:
 - **REG0**: UART baud rate, Air data rate, Serial parity bit.
 - **REG1**: Sub-packet length, Transmission power.
 - **REG2**: Channel frequency (850.125 + REG2 MHz).
-#### **Asymmetric Communication Protocol**
+### **Asymmetric Communication Protocol**
 
 <div align="center">
 	<img src="../assets/asymmetric-protocol.png" width="400" />
@@ -294,7 +294,7 @@ The system is split into the following primary tasks, arranged by priority:
 4. `telemetryTask` (Normal Priority): Formats basic telemetry packets (battery voltage, altitude, drone state) and queues them for LoRa transmission back to the ground station.
 5.  `transferTask` (Realtime Priority - Ground Only): This task remains entirely dormant during flight. It is only activated when the drone receives a "KILL" command. Once active, it monopolizes the CPU to rapidly read the raw SPI Flash memory and write it to the SD Card as a formatted CSV file.
 
-#### **Flight State**
+### **Flight State**
 
 The firmware relies on a strict state machine to ensure safety and prevent control windup on the ground:
 1. **INIT**: System runs `sys_check()` to test buzzer, servos, motors, and sensors. 

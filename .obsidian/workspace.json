@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
-                "mode": "preview",
+                "file": "docs/kr/개요.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "개요"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "docs/kr/개요.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "docs/kr/개요.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "docs/kr/개요.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -190,13 +190,14 @@
   },
   "active": "48ac7199ca915220",
   "lastOpenFiles": [
-    "docs/kr/개요.md",
-    "docs/kr/README.md",
-    "docs/kr/소프트웨어.md",
-    "docs/kr/하드웨어.md",
     "docs/en/Hardware.md",
+    "docs/kr/하드웨어.md",
+    "docs/kr/소프트웨어.md",
     "docs/en/Software.md",
     "docs/en/Overview.md",
+    "README.md",
+    "docs/kr/개요.md",
+    "docs/kr/README.md",
     "docs/en/README.md",
     "remote/tvc-drone/docs/en/Hardware.md",
     "remote/tvc-drone/docs/en",
