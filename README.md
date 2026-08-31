@@ -2,7 +2,7 @@
 # About
 
 <div align="center">
-	<img src="../resources/images/photo0.png" width="300" />
+	<img src="resources/images/photo0.png" width="300" />
 </div>
 
 The TVC(Thrust Vector Control) drone project is a demonstration of the control capabilities that can be achieved in amateur rocketry. Similar to an actual rocket with a TVC system, the drone is capable of balancing and angling itself at desired a desired set-point by vectoring the thrust it produces appropriately. This repository contains the documentation of the project along with sources of both hardware and software that was developed in the duration of the project.
@@ -29,22 +29,22 @@ Click on the images of videos to watch them. Watch video 5 or 6 if you want to s
 
 <div align="center">
 	<a href="https://www.instagram.com/reel/DbS7qK0ilDo/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer"> 
-		<img src="../resources/images/vid1.png" width="100" />
+		<img src="resources/images/vid1.png" width="100" />
 	</a>
 	<a href="https://www.instagram.com/reel/DbS74EgiR94/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer"> 
-		<img src="../resources/images/vid2.png" width="100" />
+		<img src="resources/images/vid2.png" width="100" />
 	</a>
 	<a href="https://www.instagram.com/reel/DbS8F_3iFV1/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer"> 
-		<img src="../resources/images/vid3.png" width="100" />
+		<img src="resources/images/vid3.png" width="100" />
 	</a>
 	<a href="https://www.instagram.com/reel/DbS8Rr6iW9l/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer"> 
-		<img src="../resources/images/vid4.png" width="100" />
+		<img src="resources/images/vid4.png" width="100" />
 	</a>
 	<a href="https://www.instagram.com/reel/Db1qBOZSPOG/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer"> 
-		<img src="../resources/images/vid5.png" width="100" />
+		<img src="resources/images/vid5.png" width="100" />
 	</a>
 	<a href="https://www.instagram.com/reel/Db5uuldi-zH/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer"> 
-		<img src="../resources/images/vid6.png" width="100" />
+		<img src="resources/images/vid6.png" width="100" />
 	</a>
 </div>
 
