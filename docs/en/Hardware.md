@@ -1,12 +1,12 @@
 # Index
 
-- [Design](#design)
+1. [Design](#design)
 	  - [Hardware Specifications](#hardware-specifications)
 	  - [Coaxial Design](#coaxial-design)
 	  - [Gimbal Design](#gimbal-design)
 	  - [Body Design](#body-design)
 	  - [Sensor Placement and Configuration](#sensor-placement-and-configuration)
-- [PCB](#pcb)
+2. [PCB](#pcb)
 	  - [Component Overview](#component-overview)
 	  - [System Initialization and Checks](#system-initialization-and-checks)
 	  - [Microcontroller and Sensors](#microcontroller-and-sensors)
@@ -45,11 +45,17 @@ The gimbal uses two cheap and widely available MG90S servos. Metal gear servos w
 
 In the design, one of the gears have a normal 3:1 reduction ratio, and the other has a 4:1 gear reduction ratio. This is due to the geometry of how the servos are mounted. Servo-x is operated like a normal gear with a gear ratio of 3:1 and has a fixed spinning axis, as shown in section analysis below.
 
-![[section-analysis1.png]]
+
+<div align="center">
+	<img src="../assets/section-analysis1.png" width="400" />
+</div>
 
 However, the gear attached to the servo-y revolves around the TVC axis as it rotates. This rotation of the axis makes it necessary for the servo to make an additional full rotation when TVC is rotated 360 degrees making the gear ratio 4:1. This effect has to be accounted for when managing TVC angles in software.
 
-![[section-analysis2.png]]
+<div align="center">
+	<img src="../assets/section-analysis2.png" width="400" />
+</div>
+
 #### **Body Design**
 
 The body frame ware structured using 3mm solid carbon fiber rods cut to appropriate lengths to make the drone light weight and rigid. The rods are held together by custom designed 3D printed pieces. The rods are held to the 3D printed part by screws that was screwed into place by making the diameter of the hole in the 3D printed part slightly smaller than screw size. A small indent was made on the rod in the position of the screw, so that the indent would hold the rod in place.

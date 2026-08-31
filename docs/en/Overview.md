@@ -1,11 +1,11 @@
 # Index
 
-- [Motive](#motive)
-- [Conventions](#conventions)
-- [System](#system)
-- [Control](#control)
-- [Tuning](#tuning)
-- [Features](#features)
+1. [Motive](#motive)
+2. [Conventions](#conventions)
+3. [System](#system)
+4. [Control](#control)
+5. [Tuning](#tuning)
+6. [Features](#features)
 
 # Motive
 

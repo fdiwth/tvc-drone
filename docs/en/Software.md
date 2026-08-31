@@ -1,28 +1,30 @@
 # Index
 
-- [Controls](#controls)
+1. [Controls](#controls)
 	- [LQR](#lqr)
 	- [PID](#pid)
 	- [Anti-Windup Mechanisms](#anti-windup-mechanisms)
 	- [LQR Servo Mapping](#lqr-servo-mapping)
-- [Sensor fusion](#sensor-fusion)
+2. [Sensor fusion](#sensor-fusion)
 	  - [Orientation Fusion](#orientation-fusion)
 	  - [Altitude Fusion](#altitude-fusion)
 	  - [Velocity Fusion](#velocity-fusion)
 	  - [Low-pass Filter](#low-pass-filter)
 	  - [Sensor Calibration](#sensor-calibration)
-- [Communication](#communication)
+3. [Communication](#communication)
 	  - [LoRa Configuration](#lora-configuration)
 	  - [Asymmetric Communication Protocol](#asymmetric-communication-protocol)
 	  - [Packet Structure](#packet-structure)
-- [FreeRTOS](#freertos)
+4. [FreeRTOS](#freertos)
 	  - [Flight State](#flight-state)
 
 # Controls
 
 There are mainly four different ways to make a TVC system: movable fins, gimbaled thrust, vernier rocket, and thrust vanes.
 
-![[examples-of-controls.gif]]
+<div align="center">
+	<img src="../assets/examples-of-controls.gif" width="400" />
+</div>
 
 However, the most modern rockets like SpaceX's falcon 9 and Starship, Rocket Lab's Electron, NASA's SLS,  KARI's Nuri(KSLV-II), JAXA's H3, CASC's Long March, ESA's Ariane and so on use gimbaled thrust to achieve controllability during flight. 
 
@@ -148,7 +150,9 @@ The XY (horizontal) position was controlled using a **cascaded structure**. In t
    - Tuning ($K_p$ = 0.140, $K_i$ = 0.040, $K_d$ = 0.008): Notice that the gains here are much smaller than the outer loop.
    - Clamping: The target attitude output is hard-clamped to $\pm0.2$ radians ($\approx 11.4^\circ$). This hard limit prevents the drone from ever commanding an extreme tilt that could compromise lift or cause an unrecoverable flip.
 
-![[control-architecture.png]]
+<div align="center">
+	<img src="../assets/control-architecture.png" width="800" />
+</div>
 
 The position control is essential if one wants to prevent drift of the drone. Because the drone produces thrust below its center of gravity, it is dynamically similar to an inverted pendulum. It is inherently unstable and wants to tip over. Furthermore, tilting the gimbal in one direction not only causes a rotational torque but also induces translational motion. If there are slight misalignments in the CG or servos, the system will slowly drift over time. 
 
@@ -258,7 +262,9 @@ Important registers to configure are:
 - **REG2**: Channel frequency (850.125 + REG2 MHz).
 #### **Asymmetric Communication Protocol**
 
-![[asymmetric-protocol.png]]
+<div align="center">
+	<img src="../assets/asymmetric-protocol.png" width="400" />
+</div>
 
 A custom communication protocol, loosely modeled off of standard packet-based networking, was implemented to make the connection robust and minimize overhead. 
 
@@ -267,7 +273,10 @@ The communication architecture is asymmetric:
 2.  GCS to Drone (Uplink): Commands sent from the GCS to the drone (e.g., arm, disarm, calibrate) are less frequent and simply use standard UTF-8 string formats.
 #### **Packet Structure**
 
-![[communication-protocol.png]]
+<div align="center">
+	<img src="../assets/communication-protocol.png" width="800" />
+</div>
+
 
 The downlink telemetry protocol is designed with a minimal 3-byte header to reduce communication overhead, ensuring the 19.2 kHz air data rate is fully utilized for actual sensor data rather than structural padding.
 

@@ -3,7 +3,7 @@
 This is the documentation index. Click on one of the links below to jump to specific sections
 
 1. [Overview](Overview.md) 
-2. [Hardware](remote/tvc-drone/docs/en/Hardware.md) 
+2. [Hardware](Hardware.md) 
 3. [Software](Software.md) 
 
 > Disclaimer
