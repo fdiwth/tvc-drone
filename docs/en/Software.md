@@ -102,11 +102,11 @@ $$
 where $Q \in \mathbb{R}^{12\times12}$ penalizes state error (orientation, rate, and integral terms) and $R \in \mathbb{R}^{4\times4}$ penalizes actuator effort:
 
 $$
-Q = \operatorname{diag}\big(q_{r_x},\, q_{r_y},\, q_{r_z},\, q_{p_z},\, q_{\dot r_x},\, q_{\dot r_y},\, q_{\dot r_z},\, q_{\dot p_z},\, q_{\int r_x},\, q_{\int r_y},\, q_{\int r_z},\, q_{\int p_z}\big)
+Q = \text{diag}\big(q_{r_x},\, q_{r_y},\, q_{r_z},\, q_{p_z},\, q_{\dot r_x},\, q_{\dot r_y},\, q_{\dot r_z},\, q_{\dot p_z},\, q_{\int r_x},\, q_{\int r_y},\, q_{\int r_z},\, q_{\int p_z}\big)
 $$
 
 $$
-R = \operatorname{diag}\big(r_{u_0},\, r_{u_1},\, r_{u_2},\, r_{u_3}\big)
+R = \text{diag}\big(r_{u_0},\, r_{u_1},\, r_{u_2},\, r_{u_3}\big)
 $$
 
 The optimal cost-to-go matrix $P$ is obtained by solving the DARE:
