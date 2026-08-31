@@ -1,0 +1,9 @@
+../Middlewares/Third_Party/Fusion/FusionMath.h:136:21:FusionRadiansToDegrees	1
+../Middlewares/Third_Party/Fusion/FusionMath.h:170:21:FusionFastInverseSqrt	1
+../Middlewares/Third_Party/Fusion/FusionMath.h:235:28:FusionVectorScale	1
+../Middlewares/Third_Party/Fusion/FusionMath.h:251:21:FusionVectorSum	1
+../Middlewares/Third_Party/Fusion/FusionMath.h:261:28:FusionVectorHadamard	1
+../Middlewares/Third_Party/Fusion/FusionMath.h:278:28:FusionVectorCross	1
+../Middlewares/Third_Party/Fusion/FusionMath.h:304:21:FusionVectorNormSquared	1
+../Middlewares/Third_Party/Fusion/FusionMath.h:322:28:FusionVectorNormalise	1
+../Middlewares/Third_Party/Fusion/FusionCompass.c:23:7:FusionCompass	5

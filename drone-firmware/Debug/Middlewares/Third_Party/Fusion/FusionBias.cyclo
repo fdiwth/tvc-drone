@@ -1,0 +1,8 @@
+../Middlewares/Third_Party/Fusion/FusionMath.h:201:28:FusionVectorAdd	1
+../Middlewares/Third_Party/Fusion/FusionMath.h:218:28:FusionVectorSubtract	1
+../Middlewares/Third_Party/Fusion/FusionMath.h:235:28:FusionVectorScale	1
+../Middlewares/Third_Party/Fusion/FusionBias.c:37:6:FusionBiasInitialise	1
+../Middlewares/Third_Party/Fusion/FusionBias.c:48:6:FusionBiasSetSettings	1
+../Middlewares/Third_Party/Fusion/FusionBias.c:62:14:FusionBiasUpdate	5
+../Middlewares/Third_Party/Fusion/FusionBias.c:90:14:FusionBiasGetOffset	1
+../Middlewares/Third_Party/Fusion/FusionBias.c:99:6:FusionBiasSetOffset	1

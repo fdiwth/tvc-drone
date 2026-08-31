@@ -1,0 +1,4 @@
+../Drivers/Src/motor.c:3:6:motor_init	1
+../Drivers/Src/motor.c:8:6:motor_set	8
+../Drivers/Src/motor.c:17:6:motor_swipe	6
+../Drivers/Src/motor.c:40:6:motor_calibrate_escs	1

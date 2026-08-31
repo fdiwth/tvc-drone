@@ -1,0 +1,3 @@
+../Drivers/Src/lqr.c:4:6:lqr_init	2
+../Drivers/Src/lqr.c:20:6:lqr_set_ref	1
+../Drivers/Src/lqr.c:24:6:lqr_compute	5

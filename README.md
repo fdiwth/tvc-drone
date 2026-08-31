@@ -6,21 +6,20 @@ The TVC(Thrust Vector Control) drone project is a demonstration of the control c
 
 The repository is mainly split into five sections:
 
+ - tvc-drone/apps
  - tvc-drone/docs
+ - tvc-drone/gcs-firmware
  - tvc-drone/drone-firmware
- - tvc-drone/drone-hardware
- - tvc-drone/reciever-firmware
- - tvc-drone/reciever-hardware
+ - tvc-drone/resources
 
 The best way to navigate this repository if you are looking for an in depth guide is to follow along the documentation available in your language of choice below tvc-drone/docs. The documentation explains the design choices, and the links to appropriate sections of the repository.
 
 If you are looking to look at a specific part of the sources, navigating to the appropriately named folders will help find the resources you need.
 
-To get a short overview of the features used in the project, see the "overview" section just below.
+To get a short overview of the features used in the project, check out the overview section available at tvc-drone/docs/{language}.
 
-# Overview
+# Videos
 
-(to be written...)
 
 
 # Disclaimer
@@ -29,7 +28,7 @@ This repository is merely a demonstration of what is achievable with a custom-bu
 
 # Contact
 
-Anyone with any questions regarding this project are more than welcome to reach out through contact informations listed below.
+Anyone with any questions regarding this project are welcome to reach out through contact informations listed below.
 
 instagram: fd.iwth
 email: fdiwth@gmail.com 

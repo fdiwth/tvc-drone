@@ -1,0 +1,9 @@
+../Drivers/Src/icm42688p.c:57:20:cs_lo	1
+../Drivers/Src/icm42688p.c:58:20:cs_hi	1
+../Drivers/Src/icm42688p.c:62:26:reg_read	4
+../Drivers/Src/icm42688p.c:83:26:reg_write	2
+../Drivers/Src/icm42688p.c:122:13:decode_raw	1
+../Drivers/Src/icm42688p.c:157:19:icm42688p_init	15
+../Drivers/Src/icm42688p.c:236:19:icm42688p_read	3
+../Drivers/Src/icm42688p.c:252:19:icm42688p_read_dma	8
+../Drivers/Src/icm42688p.c:283:6:icm42688p_dma_irq_handler	4

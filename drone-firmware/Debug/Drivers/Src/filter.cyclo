@@ -1,0 +1,3 @@
+../Drivers/Src/filter.c:3:6:lpf_init	1
+../Drivers/Src/filter.c:9:7:lpf_update	2
+../Drivers/Src/filter.c:20:6:lpf_reset	1

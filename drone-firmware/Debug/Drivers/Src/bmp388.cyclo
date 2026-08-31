@@ -1,0 +1,14 @@
+../Drivers/Src/bmp388.c:57:20:cs_lo	1
+../Drivers/Src/bmp388.c:58:20:cs_hi	1
+../Drivers/Src/bmp388.c:62:26:reg_read	4
+../Drivers/Src/bmp388.c:83:26:reg_write	2
+../Drivers/Src/bmp388.c:102:15:osr_to_scale	9
+../Drivers/Src/bmp388.c:120:23:sign_ext12	2
+../Drivers/Src/bmp388.c:125:23:sign_ext20	2
+../Drivers/Src/bmp388.c:132:26:load_calibration	2
+../Drivers/Src/bmp388.c:175:13:compensate	1
+../Drivers/Src/bmp388.c:205:13:process_raw	3
+../Drivers/Src/bmp388.c:239:19:bmp388_init	20
+../Drivers/Src/bmp388.c:318:19:bmp388_read	9
+../Drivers/Src/bmp388.c:348:19:bmp388_read_dma	8
+../Drivers/Src/bmp388.c:379:6:bmp388_dma_irq_handler	4

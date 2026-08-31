@@ -1,0 +1,14 @@
+../Middlewares/Third_Party/Fusion/FusionMath.h:136:21:FusionRadiansToDegrees	1
+../Middlewares/Third_Party/Fusion/FusionMath.h:149:21:FusionArcSin	3
+../Middlewares/Third_Party/Fusion/FusionMath.h:218:28:FusionVectorSubtract	1
+../Middlewares/Third_Party/Fusion/FusionMath.h:261:28:FusionVectorHadamard	1
+../Middlewares/Third_Party/Fusion/FusionMath.h:481:28:FusionMatrixMultiply	1
+../Middlewares/Third_Party/Fusion/FusionMath.h:540:27:FusionQuaternionToEuler	1
+../Middlewares/Third_Party/Fusion/FusionModel.h:26:28:FusionModelInertial	1
+../Middlewares/Third_Party/Fusion/FusionModel.h:37:28:FusionModelMagnetic	1
+../Core/Src/freertos.c:201:6:MX_FREERTOS_Init	1
+../Core/Src/freertos.c:308:6:ControlTask	73
+../Core/Src/freertos.c:841:6:CommandTask	26
+../Core/Src/freertos.c:1091:6:LoggerTask	2
+../Core/Src/freertos.c:1115:6:TelemetryTask	2
+../Core/Src/freertos.c:1160:6:TransferTask	3

@@ -1,0 +1,11 @@
+../Drivers/Src/pmw3901.c:12:13:dwt_delay_us	2
+../Drivers/Src/pmw3901.c:19:13:dwt_enable	1
+../Drivers/Src/pmw3901.c:35:20:cs_lo	1
+../Drivers/Src/pmw3901.c:36:20:cs_hi	1
+../Drivers/Src/pmw3901.c:39:26:reg_write	1
+../Drivers/Src/pmw3901.c:50:26:reg_read	2
+../Drivers/Src/pmw3901.c:64:13:parse_burst	1
+../Drivers/Src/pmw3901.c:116:19:pmw3901_init	12
+../Drivers/Src/pmw3901.c:172:19:pmw3901_read	4
+../Drivers/Src/pmw3901.c:193:19:pmw3901_read_dma	5
+../Drivers/Src/pmw3901.c:213:6:pmw3901_dma_irq_handler	3

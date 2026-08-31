@@ -1,0 +1,13 @@
+../Drivers/Src/bmm150.c:30:13:cs_assert	1
+../Drivers/Src/bmm150.c:31:13:cs_deassert	1
+../Drivers/Src/bmm150.c:33:26:reg_read	4
+../Drivers/Src/bmm150.c:53:26:reg_write	2
+../Drivers/Src/bmm150.c:73:26:load_trim	11
+../Drivers/Src/bmm150.c:112:14:compensate_x	3
+../Drivers/Src/bmm150.c:135:14:compensate_y	3
+../Drivers/Src/bmm150.c:158:14:compensate_z	5
+../Drivers/Src/bmm150.c:181:13:decode_raw	1
+../Drivers/Src/bmm150.c:208:19:bmm150_init	14
+../Drivers/Src/bmm150.c:262:19:bmm150_read	6
+../Drivers/Src/bmm150.c:286:19:bmm150_read_dma	7
+../Drivers/Src/bmm150.c:326:6:bmm150_dma_irq_handler	4

@@ -1,0 +1,10 @@
+../Drivers/Src/ina226.c:26:26:write_reg	1
+../Drivers/Src/ina226.c:32:26:read_reg	2
+../Drivers/Src/ina226.c:42:13:convert_raw	1
+../Drivers/Src/ina226.c:61:19:ina226_init	8
+../Drivers/Src/ina226.c:88:19:ina226_read	6
+../Drivers/Src/ina226.c:104:19:ina226_read_dma	5
+../Drivers/Src/ina226.c:126:6:ina226_dma_irq_handler	11
+../Drivers/Src/ina226.c:176:19:ina226_set_calibration	1
+../Drivers/Src/ina226.c:181:19:ina226_set_config	1
+../Drivers/Src/ina226.c:186:19:ina226_wait_conversion_ready	4
